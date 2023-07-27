@@ -52,6 +52,7 @@ pipeline {
         stage ('Docker Build Stage and Push') {
             steps {
                 script {
+                    sh 'echo *******Docker Build stage Started******'
                     sh 'docker build -t ${DOCKERIMAGE_NAME} .'
                     def dockerImage = docker.image("${DOCKERIMAGE_NAME}")
                     docker.withRegistry('https://index.docker.io/v1/', "dockerhub") {
