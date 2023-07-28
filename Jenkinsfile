@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage ('Git Checkout') {
             steps {
-                sh 'echo Passed'
+                sh 'echo Passed.'
             }
         }
 
